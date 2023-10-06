@@ -5,15 +5,17 @@ pipeline {
     }
     stages {
         stage('Stage One') {
-        environment { 
-            ENV_URL = "stage.google.com"     // Stage level variable
+        environment {                                    // Stage level variable
+            ENV_URL = "stage.google.com"                           
+            SSH_CRED = credentials('SSH_CRED')    
            }
             steps {
                 sh  '''
                 echo Hello world
                 echo Welcome to Jenkins
                 echo Environment URL is ${ENV_URL}
-                
+                env
+
                 '''
             }
         }
