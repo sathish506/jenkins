@@ -2,13 +2,13 @@ pipeline {
     agent any
     environment {                            // Pipeline Variables : All the stages of the pipeline can use it.
         ENV_URL = "pipeline.google.com"
+        SSH_CRED = credentials('SSH_CRED')  
     }
     stages {
         stage('Stage One') {
         environment {                                    // Stage level variable
             ENV_URL = "stage.google.com"                           
-            SSH_CRED = credentials('SSH_CRED')    
-           }
+              }
             steps {
                 sh  '''
                 echo Hello world
