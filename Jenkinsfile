@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Stage One') {
             steps {
@@ -9,10 +8,8 @@ pipeline {
         }
     }
 }
-
 pipeline {
     agent any
-
     stages {
         stage('Stage Two') {
             steps {
@@ -21,10 +18,8 @@ pipeline {
         }
     }
 }
-
 pipeline {
     agent any
-
     stages {
         stage('Stage Three') {
             steps {
