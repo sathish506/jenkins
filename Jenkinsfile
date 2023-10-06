@@ -16,7 +16,7 @@ pipeline {
     }
     stages {
         stage('Stage One') {
-        environment {                                    // Stage level variable
+        environment {                                     // Stage level variable
             ENV_URL = "stage.google.com"                           
               }
             steps {
@@ -28,7 +28,7 @@ pipeline {
 
                 '''
             }
-        }
+      }
         stage('Stage Two') {
             environment { 
             BATCH = "B55"
