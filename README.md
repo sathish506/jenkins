@@ -2,8 +2,8 @@
 
 This is a repository created to host all the learnings related to jenkins from basics to advanced pipelines using both declarative pipelines and scripted pipelines using shared libraries.
 
-Pipeline Types:
-------------------
+### Pipeline Types:
+----------------------
 V1: scripted pipeline
 
 V2: DSL/ Declarative pipelines
