@@ -4,6 +4,9 @@ pipeline {
         ENV_URL = "pipeline.google.com"
         SSH_CRED = credentials('SSH_CRED')  
     }
+       triggers { 
+        pollSCM('*/59 * * * 1-5') 
+    }
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?') 
         text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
