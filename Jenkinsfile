@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'ws'
+    }
     environment {                            // Pipeline Variables : All the stages of the pipeline can use it.
         ENV_URL = "pipeline.google.com"
         SSH_CRED = credentials('SSH_CRED')  
