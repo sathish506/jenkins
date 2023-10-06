@@ -32,6 +32,7 @@ pipeline {
                 echo Welcome to Jenkins
                 echo Environment URL is ${ENV_URL}
                 mvn -v
+                hostname
                 sleep 10
 
                 '''
