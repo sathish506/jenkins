@@ -14,6 +14,11 @@ pipeline {
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
+
+     tools {
+        maven 'maven-3.9.4' 
+    }
+
     stages {
         stage('Stage One') {
         environment {                                     // Stage level variable
@@ -24,7 +29,7 @@ pipeline {
                 echo Hello world
                 echo Welcome to Jenkins
                 echo Environment URL is ${ENV_URL}
-                env
+                mvn -v
 
                 '''
             }
