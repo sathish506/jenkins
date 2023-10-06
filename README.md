@@ -5,7 +5,9 @@ This is a repository created to host all the learnings related to jenkins from b
 Pipeline Types:
 ------------------
 V1: scripted pipeline
+
 V2: DSL/ Declarative pipelines
+
 V3: YAML: [Still in Deelopment phase]
 
 ### Naming standards of Jenkins Pipeline
